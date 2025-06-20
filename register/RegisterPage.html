@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Teacher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+
+    <div class="container">
+      <h2>👩‍🏫 Teacher Registration</h2>
+      <form action="http://localhost:5555/save" method="post">
+        <label for="name">👤 Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Full Name"
+          required
+        />
+
+        <label for="email">📧 Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address"
+          required
+        />
+
+        <label for="password">🔒 Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Create a Password"
+          required
+        />
+
+        <label for="contact">📱 Contact</label>
+        <input
+          type="tel"
+          name="contact"
+          id="contact"
+          placeholder="Contact Number"
+          required
+        />
+
+        <input type="hidden" name="isActive" value="false" />
+
+        <input type="submit" name="btn" value="Register" />
+      </form>
+    </div>
+
+    <script>
+      const toggle = document.getElementById("darkModeToggle");
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>
